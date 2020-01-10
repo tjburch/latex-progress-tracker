@@ -23,7 +23,7 @@ It also outputs a handy twitter-friendly version too:
 From a terminal run ```crontab -e``` and add the following line:
 
 ```
-0 12 * * *  source /Users/tburch/Documents/gitDevelopment/thesis/updateProgress.sh
+0 12 * * *  source path/to/directory/updateProgress.sh
 ```
 
 This will run daily at noon (change the 12 if you want another time). In ```updateProgress.sh```, the top ```$PATH``` variables will have to be found (the bin and TeX directory), since it runs in a clean environment. 
