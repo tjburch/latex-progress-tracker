@@ -9,9 +9,9 @@ Requires python3, pandas, and matplotlib to be installed.
 
 The tool consists of 2 files:
 
-updateProgress.sh - This gets the word count and page count for the TeX document. To set up this script, you need to change the ```$TEX_DOC``` and ```$DOCUMENT``` variables to your .tex file and the output .pdf file. It will generate a .csv on the first run and then append a new line to it every time this is ran. You can run this script as you choose, or run daily as a cron job (instructions at the bottom).
+**updateProgress.sh** - This gets the word count and page count for the TeX document. To set up this script, you need to change the ```$TEX_DOC``` and ```$DOCUMENT``` variables to your .tex file and the output .pdf file. It will generate a .csv on the first run and then append a new line to it every time this is ran. You can run this script as you choose, or run daily as a cron job (instructions at the bottom).
 
-plotProgress.py - This plots the progress of your document. It outputs progress.png, a plot of the word and page count for your document. If you'd like to add addition vertical markers for important dates, a routine for doing so is commented out in the script.
+**plotProgress.py** - This plots the progress of your document. It outputs progress.png, a plot of the word and page count for your document. If you'd like to add addition vertical markers for important dates, a routine for doing so is commented out in the script.
 
 It also outputs a handy twitter-friendly version too:
 
