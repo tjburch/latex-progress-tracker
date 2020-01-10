@@ -1,5 +1,5 @@
 # latex-progress-tracker
-Progress tracking plots for LaTeX documents
+### Progress tracking plots for LaTeX documents.
 
 This tool generates plots to track the progress of LaTeX documents over time. The plot generated looks similar to the below one, I've used for my thesis...
 
