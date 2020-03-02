@@ -3,7 +3,11 @@
 
 This tool generates plots to track the progress of LaTeX documents over time. The plot generated looks similar to the below one, I've used for my thesis...
 
-![](https://gitlab.com/tjburch/thesis/raw/master/progressTracking/plots/combinedProgress.png)
+![Combined Progress Plot](examples/progress.png)
+
+Additionally it now outputs plots with weekly progress:
+
+![Time Delta Plot](examples/delta_plots.png)
 
 Requires python3, pandas, and matplotlib to be installed.
 
@@ -15,7 +19,7 @@ The tool consists of 2 files:
 
 It also outputs a handy twitter-friendly version too:
 
-![](https://gitlab.com/tjburch/thesis/raw/master/progressTracking/plots/combinedProgress_twitter.png)
+![Twitter Friendly Version](examples/progress_twitter.png)
 
 
 ## Running as a cronjob:
