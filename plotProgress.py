@@ -74,6 +74,7 @@ def make_pages_plot(axis):
     plt.sca(axis)
     plt.plot(done_resample_df['pagecount'].diff(), color="forestgreen",label="Rolling 7-Day Change")
     plt.ylabel("Pages",fontsize=14)
+    plt.annotate("{:,d} Pages".format(current_pagecount), xy=(.05,.88), xycoords="axes fraction", fontsize=16)
 
 def make_words_plot(axis):
     df.plot(y='wordcount',legend=None, color=pc_color, ax=axis,label="Raw Data")
@@ -83,6 +84,7 @@ def make_words_plot(axis):
     plt.sca(axis)
     plt.plot(done_resample_df['wordcount'].diff(), color="forestgreen",label="Rolling 7-Day Change")
     plt.ylabel("Words",fontsize=14)
+    plt.annotate("{:,d} Words".format(current_wordcount), xy=(.05,.88), xycoords="axes fraction", fontsize=16)
 
 def make_format():
     sns.despine()
