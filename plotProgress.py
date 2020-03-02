@@ -7,6 +7,7 @@ import sys
 import numpy as np
 import seaborn as sns
 savedir = os.getcwd()+"/"
+output_format = ".png"
 
 df = pd.read_csv(os.getcwd()+"/"+sys.argv[1])
 df['timestamp_fixed'] = pd.to_datetime(df['timestamp'], format="%Y-%m-%d %H:%M:%S")
@@ -17,7 +18,6 @@ current_wordcount = df["wordcount"].iloc[-1]
 
 wc_color="orangered"
 pc_color="royalblue"
-
 
 # Plot with Combined progress
 months = mdates.MonthLocator()  # every month
@@ -57,12 +57,12 @@ for title,dt in dates.items():
 ax.tick_params(labelsize=12)
 ax2.tick_params(labelsize=12)
 plt.tight_layout()
-plt.savefig(savedir+"progress.png")
+plt.savefig(savedir+"progress"+output_format)
 
 # Twitter-friendly
 fig = plt.gcf()
 fig.set_size_inches(2*fig.get_figheight(),fig.get_figheight(),forward=True)
-plt.savefig(savedir+"progress_twitter.png")
+plt.savefig(savedir+"progress_twitter"+output_format)
 plt.close()
 
 ##### Time Delta Plot ####
@@ -105,4 +105,4 @@ ax2.xaxis.set_major_locator(months)
 ax2.xaxis.set_major_formatter(years_fmt)
 plt.minorticks_off()
 plt.tight_layout()
-plt.savefig(savedir+'delta_plots.png')
+plt.savefig(savedir+"delta_plots"+output_format)
