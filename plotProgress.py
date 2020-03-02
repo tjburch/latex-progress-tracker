@@ -22,7 +22,7 @@ pc_color="royalblue"
 # Plot with Combined progress
 months = mdates.MonthLocator()  # every month
 days = mdates.DayLocator()  # every day
-date_fmt = mdates.DateFormatter('%m-%d')
+date_fmt = mdates.DateFormatter('%b %Y')
 
 fig, ax = plt.figure(), plt.gca()
 ax2= ax.twinx()
@@ -100,8 +100,7 @@ make_format()
 plt.xlabel("Date",fontsize=14)
 plt.legend(bbox_to_anchor=(1.2,1), loc="center",frameon=False,fontsize=14)
 
-days = mdates.DayLocator()
-months = mdates.MonthLocator()  # every month
+months = mdates.MonthLocator()
 years_fmt = mdates.DateFormatter('%b %Y')
 ax2.xaxis.set_major_locator(months)
 ax2.xaxis.set_major_formatter(years_fmt)
